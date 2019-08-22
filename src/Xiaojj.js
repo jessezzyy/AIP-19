@@ -6,7 +6,7 @@ class Xiaojj extends Component{
         super(props)
         this.state = {
             inputValue:'wogun',
-            list:['按摩','牛角']
+            list:['1','2','3']
         }
 
     }
@@ -16,7 +16,7 @@ class Xiaojj extends Component{
                 <Fragment>
                 <div>
                     <input value={this.state.inputValue} onChange={this.inputChange.bind(this)}/>
-                <button onClick={this.addList.bind(this)}>增加服务</button>
+                <button onClick={this.addList.bind(this)}>add</button>
                 </div>
                 <ul>
                     {
