@@ -2,7 +2,7 @@ const http = require('http');
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
-var user = require('./user')
+var user = require('./actions/user')
 
 app.use(bodyParser.json());//使用body parser用于解析post的body
 app.use(bodyParser.urlencoded({ extended: true }));//使用body parser用于解析post的body

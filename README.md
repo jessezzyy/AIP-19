@@ -4,65 +4,45 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+firstly, please cd to project src directory,
+### `node server.js`
+Start server to transfer data between front end and database. 
+
 ### `npm start`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
 
-### `npm test`
+# Coding Principles
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+1.	Consistent indentation：
+Write code with a consistent indentation style, following the existing styles used in the project.
+2.	Code grouping：
+Different functions are placed in separate blocks of code, separated by Spaces.
+3.	Consistent naming scheme：
+The word boundary of a name is achieved by capitalizing the first letter of each word.
+4.	Avoid deep nesting：
+Make changes to the code to lower the nesting level and make it easier to read.
+5.	Comments and documentation：
+Add comments to the function definition so you can preview it when you use it. Functions can be called from third-party libraries.
+6.	Principle of dry：
+Avoid duplicating data and logic when writing code.
+7.	Limit line length：
+Avoid writing long horizontal lines and limit the maximum number of characters per line.
+8.	Single responsibility：
+Every class or module in a program should only concern itself with providing one bit of specific functionality.
+9.	Code and data classification：
+Use MVC framework to divide the program into three different areas for later maintenance.
+10.	 Object orientation and programs：
+By creating a good architecture through object-oriented programming, program functions can perform specific tasks independently.
+11.	 Avoid premature optimization：
+Premature optimization leads to a failure to figure out what the real problem is, which wastes a lot of time speeding up a function that isn't called very often.
+12.	 File and folder organization：
+Avoid writing complete code in a single file, or function files can be too large and difficult to maintain. Use frameworks to mimic the folder structure.
+13.	 Code refactoring：
+Refactoring allows you to change code without changing other functionality, improving readability and quality.
+14.	 Open/Closed：
+Open the code to extend, but not modify. Improved stability and maintainability.
+15.	 Capitalize SQL special words：
+Distinguish table and column names by uppercase.
