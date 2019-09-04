@@ -1,7 +1,7 @@
 import React,{Component,Fragment} from 'react';
-import { exportDefaultDeclaration } from '@babel/types';
 
-class Xiaojj extends Component{
+
+class Test extends Component{
     constructor(props){
         super(props)
         this.state = {
@@ -53,4 +53,4 @@ class Xiaojj extends Component{
       }
 }
 
-export default Xiaojj
+export default Test

@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import * as serviceWorker from './serviceWorker';
-import Router from './Route';
-  
+import * as serviceWorker from './conponents/serviceWorker';
+import Router from './router/Route';
+
   
   
 
@@ -12,3 +12,6 @@ ReactDOM.render(<Router />, document.getElementById('root'));
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
+
+
