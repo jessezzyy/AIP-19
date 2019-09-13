@@ -2,8 +2,11 @@ const http = require('http');
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
-var user = require('./actions/user')
+var user = require('./actions/user');
 
+var cors = require('cors');
+
+app.use(cors());
 app.use(bodyParser.json());//使用body parser用于解析post的body
 app.use(bodyParser.urlencoded({ extended: true }));//使用body parser用于解析post的body
 
@@ -40,3 +43,4 @@ var server = app.listen(8081, function () {
   var port = server.address().port
   console.log("ip: http://%s:%s", host, port)
 })
+
