@@ -8,7 +8,6 @@ class Login extends Component {
         this.handleUserChange = this.handleUserChange.bind(this);
         this.handlePasswordChange = this.handlePasswordChange.bind(this);
         this.submit = this.submit.bind(this);
-        this.getConnect = this.getConnect.bind(this);
         this.state = {
             user:'',
           password:''
@@ -33,26 +32,19 @@ class Login extends Component {
     }
 
     submit(){
-        this.getConnect();
+        axios.post('/login', {
+            user: this.state.user,
+            password: this.state.password
+          })
+          .then(function (response)  {
+            window.alert(response.data);
+              console.log(response);
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
     }
-
-    getConnect(){  
-        let text = {user:this.state.user,password:this.state.password} 
-        let send = JSON.stringify(text);   
-        fetch(`http://127.0.0.1:8081/login`,{  
-            method: 'POST',
-            headers: {'Content-Type': 'application/json; charset=utf-8'},
-            body: send
-        }).then(res => res.json()).then(
-            data => {
-                if(data.success) {
-                    window.alert('succussful');
-                    this.props.history.push('/test');
-            }
-                else window.alert('failed')
-            }
-        )
-    }
+    
 
     handleUserChange(e){
         this.setState({user:e.target.value})
