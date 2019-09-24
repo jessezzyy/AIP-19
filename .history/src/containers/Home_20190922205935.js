@@ -1,0 +1,57 @@
+import React,{Component} from 'react';
+import { Link } from 'react-router-dom';
+import {Menu, Image } from 'semantic-ui-react';
+import 'semantic-ui-css/semantic.min.css';
+
+class Home extends Component{
+    constructor(props) {
+        super(props);
+        this.changeContext = this.changeContext.bind(this);
+        this.state = { 
+            username: ''
+         };
+  }
+  render(){
+    return (
+        <div>
+        <Image width="100%" rounded src={require('../img/blog.jpg')}/>
+        <Menu>
+        <Menu.Item>
+            <Link to="/login/" style={{color:'black'}}>
+                {this.changeContext()}
+            </Link>
+        </Menu.Item>
+        <Menu.Item>
+            <Link to="/Test/" style={{color:'black'}}>
+                <div>Test</div>
+            </Link>
+        </Menu.Item>
+        </Menu>
+               
+    </div>
+
+
+    )
+  }
+
+  changeContext() {
+      var username = this.props.match.params.username
+    console.log(username);
+    return (<div> Log out</div>);
+    /*if (username!=null){
+        this.setState({user:username})
+        return (<div> Log out</div>);
+    }
+    else 
+        return(<div>Please Log in</div>);*/
+}
+
+
+  Greeting(props) {
+      const isloggedIn = props.isloggedIn;
+      if (isloggedIn)
+        return 1;
+  }
+}
+
+export default Home;
