@@ -33,7 +33,7 @@ module.exports = {
 		mongoose.connect('mongodb://localhost/Blog');
 		var name = new User({ name: name, username: username, password: password});
 		User.find({username: username}).exec(function(err,docs){
-           if(docs.length){
+           if(docs===null){
 			callback(false);
 			console.log('exist');
 		   }else{

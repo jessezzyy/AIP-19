@@ -32,8 +32,8 @@ module.exports = {
 	signup: function(name, username, password,callback){
 		mongoose.connect('mongodb://localhost/Blog');
 		var name = new User({ name: name, username: username, password: password});
-		User.find({username: username}).exec(function(err,docs){
-           if(docs.length){
+		name.find({username: username}).exec(function(err,docs){
+           if(docs){
 			callback(false);
 			console.log('exist');
 		   }else{

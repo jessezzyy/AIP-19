@@ -12,6 +12,28 @@ var user = new Schema({
  var User = mongoose.model('users', user); 
 
 module.exports = {
+	/*signup: function(name, username, password,callback){
+		MongoClient.connect(url,{ useNewUrlParser: true, useUnifiedTopology: true},  function(err, database) {
+		  var db = database.db('Blog');
+		  db.collection('users').findOne( {user : username},function(err, result){
+			  if(result==null){
+				db.collection('users').insertOne( {
+					"name": name,
+					"user": username,
+					"password": password
+				},function(err, result){
+					assert.equal(err, null);
+					callback(true);
+					console.log("Saved the user sign up details.");
+				});
+			  }
+			  else{
+				callback(false);
+			  }
+		  });
+		});
+	},*/
+
 	validateSignIn: function(username, password,callback){
 		
 		MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true}, function(err, database){
@@ -32,18 +54,15 @@ module.exports = {
 	signup: function(name, username, password,callback){
 		mongoose.connect('mongodb://localhost/Blog');
 		var name = new User({ name: name, username: username, password: password});
-		User.find({username: username}).exec(function(err,docs){
-           if(docs.length){
-			callback(false);
-			console.log('exist');
-		   }else{
-		     name.save(function (err,doc) {
+		  name.save(function (err,name) {
+			   console.log(name);
+			  if(err)
+				callback(false);
+			  else{
 			  callback(true);
 			  console.log("Saved the user sign up details.");
-			  
-			 });
-		}
-	});
+			  }
+			});
 	}
 	
 
