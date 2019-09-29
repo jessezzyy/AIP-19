@@ -19,6 +19,7 @@ class Router extends Component{
             <Route path="/test" component={Test} /> 
             <Route path="/Discussion" component={Discussion} /> 
             <Route path="/Comment" component={Comment} />
+            <Route path="/Home" component={Home} />
             <Route path="/user/:username" component={Home} />
           </div>
           </BrowserRouter>
