@@ -83,11 +83,24 @@ app.post('/signup', function (req, res) {
 
 
 app.get('/test', function (req, res) {
-  user.allusers(function(result){
-    console.log(result);
-    res.send(result);
+  User.find({},'name',function(err,docs){
+    console.log(docs);
   });
+  res.send('d');
 })
+
+var mongoose = require('mongoose');
+var assert = require('assert');
+var Schema = mongoose.Schema;
+var url = 'mongodb://localhost:27017/Blog';
+
+var user = new Schema({
+	name:String,
+	username:String,
+	password:String
+ });
+ var User = mongoose.model('users', user); 
+ mongoose.connect('mongodb://localhost/Blog',{ useNewUrlParser: true, useUnifiedTopology: true});
 
 
 var server = app.listen(8081, function () {

@@ -14,7 +14,6 @@ class Test extends Component{
         return(
             <div>
                 <Fragment>
-                    <h1>Users Rank</h1>
                 <ul>
                 {this.state.list.map(list => <li>{list.name}</li>)}
                    
