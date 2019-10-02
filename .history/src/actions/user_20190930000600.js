@@ -10,11 +10,14 @@ var user = new Schema({
 	password:String
  });
  var User = mongoose.model('users', user); 
- mongoose.connect(url,{ useNewUrlParser: true, useUnifiedTopology: true});
 
 module.exports = {
 	validateSignIn: function(username, password,callback){
-		User.findOne( { username : username ,password: password 
+		
+		MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true}, function(err, database){
+          console.log("Connected successfully to server");
+          var db = database.db('Blog');
+			db.collection('users').findOne( { username : username ,password: password 
 			},function(err, result){
 				if(result==null){
 					callback(false);
@@ -23,9 +26,11 @@ module.exports = {
 					callback(true);
 				}
 			});
+		});
 	},
 
 	signup: function(name, username, password,callback){
+		mongoose.connect('mongodb://localhost/Blog');
 		var name = new User({ name: name, username: username, password: password});
 		User.find({username: username}).exec(function(err,docs){
            if(docs.length){
@@ -41,10 +46,12 @@ module.exports = {
 	});
 	},
 	 
-	  allusers: function(callback){  
-		User.find({},{'name':1,'_id': 0},function(err,docs){
-			callback(docs);
-		});
+	  allusers: function(){
+		User.find({},function(err, data){
+			if (err) console.log(err);
+			console.log(data.name);
+			return data.name;
+		})
 	  }
 
 	

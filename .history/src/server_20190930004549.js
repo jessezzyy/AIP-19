@@ -83,10 +83,7 @@ app.post('/signup', function (req, res) {
 
 
 app.get('/test', function (req, res) {
-  user.allusers(function(result){
-    console.log(result);
-    res.send(result);
-  });
+  res.send(user.allusers());
 })
 
 

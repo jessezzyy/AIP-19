@@ -41,10 +41,14 @@ module.exports = {
 	});
 	},
 	 
-	  allusers: function(callback){  
-		User.find({},{'name':1,'_id': 0},function(err,docs){
-			callback(docs);
+	  allusers: function(){
+		User.find({},function(err,docs){
+			if(docs)
+			 return '1';
+			else
+			 return '0';
 		});
+		
 	  }
 
 	

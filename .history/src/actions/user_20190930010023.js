@@ -42,7 +42,7 @@ module.exports = {
 	},
 	 
 	  allusers: function(callback){  
-		User.find({},{'name':1,'_id': 0},function(err,docs){
+		User.find({username: '123'},'name',function(err,docs){
 			callback(docs);
 		});
 	  }

@@ -10,7 +10,7 @@ var user = new Schema({
 	password:String
  });
  var User = mongoose.model('users', user); 
- mongoose.connect(url,{ useNewUrlParser: true, useUnifiedTopology: true});
+ mongoose.connect('mongodb://localhost/Blog',{ useNewUrlParser: true, useUnifiedTopology: true});
 
 module.exports = {
 	validateSignIn: function(username, password,callback){
@@ -41,10 +41,10 @@ module.exports = {
 	});
 	},
 	 
-	  allusers: function(callback){  
-		User.find({},{'name':1,'_id': 0},function(err,docs){
-			callback(docs);
-		});
+	  allusers: function(){
+		User.find({},'name',function(err,docs){
+			return docs;
+		})
 	  }
 
 	

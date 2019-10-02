@@ -83,12 +83,9 @@ app.post('/signup', function (req, res) {
 
 
 app.get('/test', function (req, res) {
-  user.allusers(function(result){
-    console.log(result);
-    res.send(result);
-  });
+  console.log(user.allusers());
+  res.send('d');
 })
-
 
 var server = app.listen(8081, function () {
   var host = server.address().address
