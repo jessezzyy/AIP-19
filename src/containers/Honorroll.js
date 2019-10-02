@@ -5,7 +5,7 @@ import 'semantic-ui-css/semantic.min.css';
 //import axios from 'axios';
 import '../style/web.css';
 
-class Discussion extends Component{
+class Honorroll extends Component{
     constructor(props) {
         super(props);
         //this.isLogi = this.isLogin.bind(this);
@@ -27,7 +27,7 @@ class Discussion extends Component{
                 </Link>
             </Menu.Item>
             <Menu.Item>
-                <Link to="/Honorroll/" style={{color:'black'}}>
+                <Link to="/Discussion/" style={{color:'black'}}>
                     <div>Honor roll</div>
                 </Link>
             </Menu.Item>
@@ -38,75 +38,71 @@ class Discussion extends Component{
 
             <div class="show">
                 <div class="photo">
-                <Image   rounded src={require('../img/zx.jpeg')}/>
-                </div>
-                <div class="intro">
-                  <Link to="/Comment/" style={{color:'black'}}>
-                      <div class="introa">Reply</div>
-                  </Link>
-                  <Link to="/Praise/" style={{color:'black'}}>
-                  <div class="introa">Praise</div>
-                  </Link>
-                  </div>
-            
-            </div>
-
-            <div class="show">
-                <div class="photo">
-                <Image   rounded src={require('../img/zc.jpeg')}/>
-                </div>
-                <div class="intro">
-                  <Link to="/Comment/" style={{color:'black'}}>
-                      <div class="introa">Reply</div>
-                  </Link>
-                  <Link to="/Praise/" style={{color:'black'}}>
-                  <div class="introa">Praise</div>
-                  </Link>
-                  </div>
-            
-            </div>
-
-            <div class="show">
-                <div class="photo">
-                <Image   rounded src={require('../img/ww.jpeg')}/>
-                </div>
-                <div class="intro">
-                  <Link to="/Comment/" style={{color:'black'}}>
-                      <div class="introa">Reply</div>
-                  </Link>
-                  <Link to="/Praise/" style={{color:'black'}}>
-                  <div class="introa">Praise</div>
-                  </Link>
-                  </div>
-            
-            </div>
-
-            <div class="show">
-                <div class="photo">
+                <Link to="/Comment/" style={{color:'black'}}>
                 <Image   rounded src={require('../img/qq.jpeg')}/>
+                </Link>
                 </div>
                 <div class="intro">
-                  <Link to="/Comment/" style={{color:'black'}}>
-                      <div class="introa">Reply</div>
-                  </Link>
-                  <Link to="/Praise/" style={{color:'black'}}>
-                  <div class="introa">Praise</div>
-                  </Link>
+                  <div class="introa">1600</div>
+                  <div class="introa"> <Image   rounded src={require('../img/fire.jpeg')}/></div>
+                  
                   </div>
             
             </div>
 
             <div class="show">
                 <div class="photo">
-                <Image   rounded src={require('../img/as.jpeg')}/>
+                <Link to="/Comment/" style={{color:'black'}}>
+                <Image   rounded src={require('../img/zx.jpeg')}/>
+                </Link>
                 </div>
                 <div class="intro">
-                  <Link to="/Comment/" style={{color:'black'}}>
-                      <div class="introa">Reply</div>
-                  </Link>
-                  <Link to="/Praise/" style={{color:'black'}}>
-                  <div class="introa">Praise</div>
-                  </Link>
+                  <div class="introa">1400</div>
+                  <div class="introa"> <Image   rounded src={require('../img/fire.jpeg')}/></div>
+                  
+                  </div>
+            
+            </div>
+
+            <div class="show">
+                <div class="photo">
+                <Link to="/Comment/" style={{color:'black'}}>
+                <Image   rounded src={require('../img/zc.jpeg')}/>
+                </Link>
+                </div>
+                <div class="intro">
+                  <div class="introa">1100</div>
+                  <div class="introa"> <Image   rounded src={require('../img/fire.jpeg')}/></div>
+                  
+                  </div>
+            
+            </div>
+
+            <div class="show">
+                <div class="photo">
+                <Link to="/Comment/" style={{color:'black'}}>
+                <Image   rounded src={require('../img/as.jpeg')}/>
+                </Link>
+                </div>
+                <div class="intro">
+                      <div class="introa">980</div>
+                  <div class="introa"><Image   rounded src={require('../img/fire.jpeg')}/></div>
+                  
+                  </div>
+            
+            </div>
+
+            <div class="show">
+                <div class="photo">
+                <Link to="/Comment/" style={{color:'black'}}>
+                <Image   rounded src={require('../img/ww.jpeg')}/>
+                </Link>
+                </div>
+                <div class="intro">          
+                      <div class="introa">699</div>
+                
+                  <div class="introa"><Image   rounded src={require('../img/fire.jpeg')}/></div>
+                  
                   </div>
             
             </div>
@@ -123,4 +119,4 @@ class Discussion extends Component{
 
 
 
-  export default Discussion;
+  export default Honorroll;

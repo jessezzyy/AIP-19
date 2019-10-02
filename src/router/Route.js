@@ -6,6 +6,7 @@ import Test from '../containers/Test';
 import Comment from '../containers/Comment';
 import Login from '../containers/Login';
 import Signup from '../containers/Signup';
+import Honorroll from '../containers/Honorroll';
 
 
 class Router extends Component{
@@ -20,6 +21,7 @@ class Router extends Component{
             <Route path="/Discussion" component={Discussion} /> 
             <Route path="/Comment" component={Comment} />
             <Route path="/Home" component={Home} />
+            <Route path="/Honorroll" component={Honorroll} />
             <Route path="/user/:username" component={Home} />
           </div>
           </BrowserRouter>

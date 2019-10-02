@@ -5,7 +5,7 @@ import 'semantic-ui-css/semantic.min.css';
 //import axios from 'axios';
 import '../style/web.css';
 
-class Discussion extends Component{
+class Comment extends Component{
     constructor(props) {
         super(props);
         //this.isLogi = this.isLogin.bind(this);
@@ -27,7 +27,12 @@ class Discussion extends Component{
                 </Link>
             </Menu.Item>
             <Menu.Item>
-                <Link to="/Honor-roll/" style={{color:'black'}}>
+            <Link to="/Discussion/" style={{color:'black'}}>
+                <div>Discussion</div>
+            </Link>
+            </Menu.Item>
+            <Menu.Item>
+                <Link to="/Honorroll/" style={{color:'black'}}>
                     <div>Honor roll</div>
                 </Link>
             </Menu.Item>
@@ -35,6 +40,8 @@ class Discussion extends Component{
                 {this.changeContent()}
             </Menu.Item> */}
             </Menu>
+
+            <div class="container"><Image   rounded src={require('../img/ww.jpeg')}/></div>
 
             <div class="container">
                 <Image alt="Avatar"  rounded src={require('../img/qq.jpeg')} />
@@ -83,4 +90,4 @@ class Discussion extends Component{
 
 
 
-  export default Discussion;
+  export default Comment;
