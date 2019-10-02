@@ -15,6 +15,8 @@ class Comment extends Component{
         this.state = { 
             username: ''
          };
+         this.openForm = this.openForm.bind(this);
+         this.closeForm = this.closeForm.bind(this);
     }
     render(){
         return (
@@ -55,7 +57,7 @@ class Comment extends Component{
                 <span class="time-right">11:02</span>
             </div>
 
-            <button class="open-button" onClick="openForm()">Reply</button>
+            <button class="open-button" onClick={this.openForm}>Reply</button>
 
             <div class="chat-popup" id="myForm">
                 <form action="/action_page.php" class="form-container">
@@ -65,7 +67,7 @@ class Comment extends Component{
                 <textarea placeholder="Type Picture.." name="msg" required></textarea>
 
                 <button type="submit" class="btn">Send</button>
-                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                <button type="button" class="btn cancel" onClick={this.closeForm}>Close</button>
                 </form>
             </div>
             
@@ -83,6 +85,13 @@ class Comment extends Component{
     
     
         )
+      }
+      openForm(){
+          document.getElementById("myForm").style.display = "block";
+      }
+
+      closeForm(){
+          document.getElementById("myForm").style.display = "none";
       }
 
   
