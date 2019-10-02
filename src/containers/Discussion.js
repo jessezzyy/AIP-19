@@ -98,7 +98,7 @@ class Discussion extends Component{
 
             <div class="show">
                 <div class="photo">
-                <Image   rounded src={require('../img/as.jpeg')}/>
+                <Image   rounded src={require('../img/ss.jpeg')}/>
                 </div>
                 <div class="intro">
                   <Link to="/Comment/" style={{color:'black'}}>
