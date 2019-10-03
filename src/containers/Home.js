@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import {Menu, Image } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
 import axios from 'axios';
+import '../style/web.css';
 
 class Home extends Component{
     constructor(props) {
@@ -73,9 +74,32 @@ class Home extends Component{
             </Link>
         </Menu.Item>
         <Menu.Item>
+            <Link to="/Discussion/" style={{color:'black'}}>
+                <div>Discussion</div>
+            </Link>
+        </Menu.Item>
+        <Menu.Item>
+            <Link to="/Honorroll/" style={{color:'black'}}>
+                <div>Honor roll</div>
+            </Link>
+        </Menu.Item>
+        <Menu.Item>
             {this.changeContent()}
         </Menu.Item>
         </Menu>
+        <div class="square">
+          <ul class="square-inner float">
+            <li><Image width="100%" rounded src={require('../img/ss.jpeg')}/>1</li>
+            <li><Image width="100%" rounded src={require('../img/zc.jpeg')}/>2</li>
+            <li><Image width="100%" rounded src={require('../img/zx.jpeg')}/>3</li>
+            <li><Image width="100%" rounded src={require('../img/ww.jpeg')}/>4</li>
+            <li><Image width="100%" rounded src={require('../img/ss.jpeg')}/>5</li>
+            <li><Image width="100%" rounded src={require('../img/qq.jpeg')}/>6</li>
+            <li><Image width="100%" rounded src={require('../img/ss.jpeg')}/>7</li>
+            <li><Image width="100%" rounded src={require('../img/ss.jpeg')}/>8</li>
+            <li><Image width="100%" rounded src={require('../img/ss.jpeg')}/>9</li>
+          </ul>
+        </div>
                
     </div>
 
