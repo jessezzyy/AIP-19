@@ -18,8 +18,11 @@ class Comment extends Component{
          this.openForm = this.openForm.bind(this);
          this.closeForm = this.closeForm.bind(this);
     }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 6c680c13ac02d830816e725809c7679e7d7ac812
     render(){
         return (
             <div>
@@ -72,6 +75,19 @@ class Comment extends Component{
                 <button type="button" class="btn cancel" onClick={this.closeForm}>Close</button>
                 </form>
             </div>
+<<<<<<< HEAD
+=======
+            
+            {/* <script>
+               function openForm() {
+                 document.getElementById("myForm").style.display = "block";
+               }
+
+               function closeForm() {
+                 document.getElementById("myForm").style.display = "none";
+               }
+            </script> */}
+>>>>>>> 6c680c13ac02d830816e725809c7679e7d7ac812
                    
         </div>
     
@@ -86,7 +102,10 @@ class Comment extends Component{
           document.getElementById("myForm").style.display = "none";
       }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6c680c13ac02d830816e725809c7679e7d7ac812
   
 }
 
