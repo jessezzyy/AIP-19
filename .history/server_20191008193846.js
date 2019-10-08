@@ -2,8 +2,9 @@ const http = require('http');
 var express = require('express');
 var session = require('express-session');
 var app = express();
+const path = require('path');
 var bodyParser = require('body-parser');
-var user = require('./client/src/actions/user');
+var user = require('./actions/user');
 
 var cors = require('cors');
 
@@ -13,7 +14,11 @@ app.use(bodyParser.json());//使用body parser用于解析post的body
 app.use(bodyParser.urlencoded({ extended: true }));//使用body parser用于解析post的body
 var sessions;
 
-app.use(express.static('public'));
+app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname, 'build')));
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 app.post('/', function (req, res) {
   if(sessions&&sessions.username){
