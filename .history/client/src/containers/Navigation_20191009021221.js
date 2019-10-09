@@ -19,7 +19,7 @@ class Navigation extends Component {
           })
           .then(function (response)  {
             console.log(response.data);
-            if(response.data!=='meiyou'&&!that.state.username){
+            if(response.data!=='mei'&&!that.state.username){
              that.setState({username: response.data})
             }
           })
