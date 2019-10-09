@@ -36,7 +36,7 @@ module.exports = {
 		   }else{
 		     name.save(function (err,doc) {
 			  callback(true);
-			  console.log("Saved the user sign up details");
+			  console.log("Saved the user sign up details.");
 			  
 			 });
 		}
