@@ -1,7 +1,7 @@
 var MongoClient = require('mongodb').MongoClient;
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-var url = "mongodb+srv://jessezzyy:520WOcaonima!@aip2019-rbm87.mongodb.net/Blog?retryWrites=true&w=majority";
+var url = "mongodb+srv://jessezy:<password>@air-iqnbx.mongodb.net/test?retryWrites=true&w=majority";
 
 var user = new Schema({
 	name:String,
