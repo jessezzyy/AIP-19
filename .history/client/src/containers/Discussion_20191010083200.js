@@ -113,7 +113,7 @@ class Discussion extends Component{
             
              <div className="upload-plus-text">
              <Icon type="plus" />
-             <div className="ant-upload-text">upload new Image</div>
+             <div className="ant-upload-text">upload</div>
            </div>
             );
             
