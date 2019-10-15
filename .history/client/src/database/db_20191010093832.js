@@ -17,7 +17,7 @@ var user = new Schema({
   });
   
   const DisSchema = new Schema({
-	    images: [{ type: Schema.Types.ObjectId, ref: 'Img' }],
+	    images: [{ type: Schema.Types.ObjectId, ref: 'Image' }],
 		author: String,
 		url: String,
 		key_id: String,
