@@ -17,7 +17,7 @@ class Home extends Component{
   // execute when page is loading
   componentWillMount(){
      this.setState({list: getAllimage()});
-     console.log(this.state.list);
+     console(this.state.list);
   }
 
   // page content

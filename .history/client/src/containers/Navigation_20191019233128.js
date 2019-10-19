@@ -2,7 +2,6 @@ import React,{Component} from 'react';
 import { Link } from 'react-router-dom';
 import {Menu, Image } from 'semantic-ui-react';
 import axios from 'axios';
-import Signout from '../components/sign_out.js'
 
 class Navigation extends Component {
     constructor(props) {
@@ -44,11 +43,20 @@ class Navigation extends Component {
                   <div>Please Log in</div>
                 </Link>);
            }
+
        // deal wit users logging out
       logout(){
-         
-            this.setState({username: ''})
-            Signout();
+          var that = this;
+          axios.post('/home/logout', {
+            user: []
+          })
+          .then(function (response)  {
+            that.setState({username: ''})
+              window.alert("Log out sucessfully");
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
       }
 
     // page content

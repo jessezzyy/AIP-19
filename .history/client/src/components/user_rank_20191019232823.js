@@ -7,6 +7,7 @@
         content: " "
       })
       .then(function (response)  {
+        console.log(response.data);
          for (let i = 0; i < response.data.length; i++) {
 	     list.push(response.data[i])
 	} 

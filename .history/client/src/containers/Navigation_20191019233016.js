@@ -44,11 +44,11 @@ class Navigation extends Component {
                   <div>Please Log in</div>
                 </Link>);
            }
+
        // deal wit users logging out
       logout(){
-         
-            this.setState({username: ''})
-            Signout();
+         Signout()
+          this.setState({username: ''})
       }
 
     // page content
